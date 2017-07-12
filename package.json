@@ -1,0 +1,42 @@
+{
+  "name": "@tiaanduplessis/nap",
+  "version": "1.0.0",
+  "description": "Unfancy promise based sleep function",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/tiaanduplessis/nap",
+    "type": "git"
+  },
+  "homepage": "https://github.com/tiaanduplessis/nap",
+  "bugs": "https://github.com/tiaanduplessis/nap",
+  "main": "dist/nap.js",
+  "browser": "dist/nap.js",
+  "jsnext:main": "dist/nap.es.js",
+  "files": ["dist"],
+  "scripts": {
+    "test": "jest",
+    "test:cov": "npm test -- --coverage",
+    "lint": "standard 'src/**/*.js'",
+    "lint:fix": "npm run lint -- --fix",
+    "build": "bili --format es --format umd --compress",
+    "start": "npm run test",
+    "pretest": "npm run format && npm run lint:fix",
+    "format": "prettier --print-width 100 --semi false --single-quote --write 'src/**/*.js'",
+    "precommit": "npm test",
+    "prepublish": "npm run build",
+    "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags && npm publish"
+  },
+  "keywords": ["nap", "sleep", "promise", "snooze"],
+  "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
+  "babel": {
+    "presets": [["env"]]
+  },
+  "devDependencies": {
+    "jest": "^20.0.1",
+    "standard": "^10.0.2",
+    "babel-preset-env": "^1.4.0",
+    "bili": "^0.17.3",
+    "husky": "^0.14.3",
+    "prettier": "~1.5.2"
+  }
+}
