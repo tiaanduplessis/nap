@@ -61,6 +61,8 @@
 
 ## Install
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/nap.svg)](https://greenkeeper.io/)
+
 ```sh
 $ npm install @tiaanduplessis/nap
 # OR
