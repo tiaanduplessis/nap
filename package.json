@@ -36,7 +36,7 @@
     "standard": "^12.0.0",
     "babel-preset-env": "^1.4.0",
     "bili": "^4.3.2",
-    "husky": "^0.14.3",
+    "husky": "^2.2.0",
     "prettier": "~1.15.0"
   }
 }
